@@ -14,8 +14,4 @@ export class NotificationController extends BaseController {
         new NotificationService().createNotification(req, res, next);
     });
   }
-
-  constructor() {
-    super();
-  }
 }
