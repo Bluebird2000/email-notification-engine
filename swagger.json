@@ -1,0 +1,83 @@
+{
+  "swagger": "2.0",
+  "info": {
+    "description": "API documentation for the inventory backend service",
+    "version": "1.0.0",
+    "title": "Photizzo Energy Dashboard API",
+    "termsOfService": "http://dev.quabbly.com/terms/",
+    "contact": {
+      "email": "team@photizzo.com"
+    },
+    "license": {
+      "name": "Apache 2.0",
+      "url": "http://www.apache.org/licenses/LICENSE-2.0.html"
+    }
+  },
+  "host": "p-inventory-api-dev.quabbly.com",
+  "basePath": "/v1",
+  "tags": [
+    {
+      "name": "User Management",
+      "description": ""
+    },
+    {
+      "name": "Energy Storage Management",
+      "description": ""
+    }
+  ],
+  "schemes": [
+    "https"
+  ],
+  "paths": {
+  },
+  "securityDefinitions": {
+    "quabbly_auth": {
+      "type": "oauth2",
+      "authorizationUrl": "https://p-user-api-dev.quabbly.com/swagger-ui.html",
+      "flow": "implicit",
+      "scopes": {
+        "write:pets": "modify pets in your account",
+        "read:pets": "read your pets"
+      }
+    },
+    "api_key": {
+      "type": "apiKey",
+      "name": "api_key",
+      "in": "header"
+    }
+  },
+  "definitions": {
+    "userManagement": {
+      "type": "object",
+      "required": [
+        "name"
+      ],
+      "properties": {
+        "firstName": {
+          "type": "string",
+          "example": "vidibon"
+        },
+        "lastName": {
+          "type": "string",
+          "example": "vidibon"
+        },
+        "email": {
+          "type": "string",
+          "example": "vidibon2000@gmail.com"
+        },
+        "password": {
+          "type": "string",
+          "example": "default111"
+        },
+        "wattbankSN": {
+          "type": "string",
+          "example": "wattbank serial number"
+        }
+      }
+    }
+  },
+  "externalDocs": {
+    "description": "Find out more about Swagger",
+    "url": "http://swagger.io"
+  }
+}
