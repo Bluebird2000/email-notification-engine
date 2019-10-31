@@ -10,9 +10,6 @@ import { BasicResponse } from "../dto/output/basicresponse";
 export class BaseController {
 
   protected systemErrorMsg: object = { "message": "Sorry your request could not be completed at the moment" };
-  protected invalidCredentials: object = { 'message': 'Invalid Credentials' };
-  protected notAuthorized: object = { 'message': 'You are not authorized to access this resource' };
-  protected itemNotFound: object = { 'message': 'Not found' };
   protected noResults: object = { 'message': 'No results available' };
   protected start: number = 0;
   protected limit: number = 20;
