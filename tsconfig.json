@@ -1,0 +1,10 @@
+{
+  "compilerOptions": {
+      "experimentalDecorators": true,
+      "allowJs": true,
+      "lib": [
+          "es2016",
+          "dom"
+      ],
+  }
+} 
