@@ -1,5 +1,4 @@
 import { NextFunction, Request, Response } from "express";
-import chalk = require('chalk');
 import { BasicResponse } from "../dto/output/basicresponse";
 
 /**
@@ -14,14 +13,12 @@ export class BaseController {
 
 
   protected sendResponse(serviceResponse: BasicResponse, req: Request, res: Response, next: NextFunction): any {
-    var response = {
+    let response = {
       status: serviceResponse.getStatusString(),
       data: serviceResponse.getData()
     }
 
     res.status(this.getHttpStatus(serviceResponse.getStatusString()));
-
-    console.log('responding with', response);
     res.json(response);
     next();
   }
@@ -38,8 +35,8 @@ export class BaseController {
         return 500;
     }
   }
-  protected sendError(req: Request, res: Response, next: NextFunction, data?: Object) {
 
+  protected sendError(req: Request, res: Response, next: NextFunction, data?: Object) {
     let dat = {
       status: 401,
       data: data
