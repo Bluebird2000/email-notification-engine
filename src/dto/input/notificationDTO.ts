@@ -1,7 +1,6 @@
-import { IsEmail, IsArray, IsNotEmpty } from "class-validator";
+import { IsNotEmpty } from "class-validator";
 
 export class createNotificationDTO {
-  // @IsArray()
   @IsNotEmpty({
     message: 'recipient field cannot be empty'
   })
@@ -18,7 +17,7 @@ export class createNotificationDTO {
   subject?: string;
 
   @IsNotEmpty({
-    message: 'content field cannot be empty'
+    message: 'message field cannot be empty'
   })
   content: string;
 
