@@ -40,7 +40,7 @@ export class NotificationService extends BaseService {
 
     const msg = {
         to: email,
-        from: 'admin@photizzo.com',
+        from: 'email@noreply.com',
         subject: subject,
         html: `<p>${content}</p>`
     };
