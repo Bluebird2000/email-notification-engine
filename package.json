@@ -20,7 +20,7 @@
     "body-parser": "^1.15.2",
     "chai-http": "^4.2.1",
     "chalk": "^2.4.1",
-    "class-validator": "^0.9.1",
+    "class-validator": "^0.14.0",
     "cookie-parser": "^1.4.3",
     "cors": "^2.8.5",
     "dotenv": "^6.0.0",
